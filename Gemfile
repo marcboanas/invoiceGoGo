@@ -17,6 +17,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt'
+gem 'bootstrap-sass',       '3.2.0.0'
 
 group :development do
   gem 'better_errors'
