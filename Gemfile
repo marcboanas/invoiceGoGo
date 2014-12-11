@@ -33,6 +33,9 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock'
+  gem 'minitest-reporters', '1.0.5'
+  gem 'mini_backtrace',     '0.1.3'
+  gem 'guard-minitest',     '2.3.1'
 end
 
 group :staging, :production do
