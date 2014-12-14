@@ -39,6 +39,8 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     byebug (3.4.0)
       columnize (~> 0.8)
@@ -77,6 +79,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.2)
+      i18n (~> 0.5)
     ffi (1.9.6)
     foreman (0.75.0)
       dotenv (~> 0.11.1)
@@ -199,6 +203,7 @@ GEM
     webmock (1.20.4)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
@@ -208,12 +213,14 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (= 3.2.0.0)
+  bootstrap-will_paginate (= 0.0.10)
   byebug (= 3.4.0)
   coffee-rails
   database_cleaner
   delayed_job_active_record
   email_validator
   factory_girl_rails
+  faker (= 1.4.2)
   foreman
   geocoder
   guard-minitest (= 2.3.1)
@@ -234,3 +241,4 @@ DEPENDENCIES
   uglifier
   unicorn
   webmock
+  will_paginate (= 3.0.7)
