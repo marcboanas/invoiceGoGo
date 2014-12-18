@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   
   #Users Routes
   get 'signup' => 'users#new'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   #Account Activation
   resources :account_activations, only: [:edit]
@@ -24,6 +28,9 @@ Rails.application.routes.draw do
   
   #Invoice Routes
   resources :invoices, only: [:create, :destroy]
+  
+  #Invoice Relationships
+  resources :relationships, only: [:create, :destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

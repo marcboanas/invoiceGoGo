@@ -25,10 +25,19 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now)
 end
-  
+
+#Invoices
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
   amount = Faker::Commerce.price
   users.each { |user| user.invoices.create!(content: content, amount: amount) }
 end
+
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
