@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214181525) do
+ActiveRecord::Schema.define(version: 20141217142614) do
+
+  create_table "invoices", force: true do |t|
+    t.text     "content"
+    t.float    "amount"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "picture"
+  end
+
+  add_index "invoices", ["user_id", "created_at"], name: "index_invoices_on_user_id_and_created_at"
+  add_index "invoices", ["user_id"], name: "index_invoices_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
